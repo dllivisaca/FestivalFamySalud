@@ -1,0 +1,53 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.header {
+    background-color: v.$naranja;
+
+    /* @include m.tablet {
+        &.fijo {
+            left: 0;
+            top: 0;
+            position: fixed;
+            width: 100%;
+            box-shadow: .1rem .2rem .3rem #666;
+        }
+    } */
+
+    h1 {
+        color: v.$azul;
+        text-align: center;
+        @include m.tablet {
+            margin: 0; //quita el espacio hacia abajo que trae el header por defecto
+        }
+    }
+    .contenido-header {
+        padding: 2rem;
+        @include m.tablet {
+            display: flex; //ubica horizontalmente
+            justify-content: space-between; //agrega espacio entre ambos elementos
+            align-items: center;
+        }
+    } 
+}
+
+.navegacion-principal {
+    @include m.tablet {
+        display: flex; //ubica las palabras cronograma, galeria y entradas de manera horizontal
+        gap: 2rem; //agrega espacio entre las 3 palabras
+    }
+    a {
+        display: block; //ubica verticalmente en un tamaño menor a tablet
+        text-align: center;
+        margin-bottom: 1rem;
+        color: v.$azul;
+        font-size: 2.4rem;
+        @include m.tablet {
+            margin: 0;
+        } 
+
+        &:hover { 
+            color: v.$verde;
+        }
+    }
+}
