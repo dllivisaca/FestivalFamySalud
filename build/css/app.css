@@ -434,8 +434,8 @@ img {
 
 .video {
   position: relative;
-  max-height: 110rem;
-  min-height: 110rem;
+  max-height: 70rem;
+  min-height: 50rem;
   overflow: hidden;
 }
 .video .overlay {
@@ -463,7 +463,7 @@ img {
 }
 .contenido-video h2 {
   color: #FFFFFF;
-  font-size: 12rem;
+  font-size: 7rem;
   margin: 0;
 }
 .contenido-video p {
@@ -473,7 +473,7 @@ img {
   padding: 1rem 2rem;
   color: #FFFFFF;
   font-weight: 700;
-  font-size: 4rem;
+  font-size: 2.4rem;
   margin: 0;
 }
 
@@ -503,4 +503,39 @@ img {
       color: v.$rosa;
       font-weight: 700;
   } */
+}
+
+.cronograma {
+  background-color: #48D1CC;
+  padding: 5rem 0;
+}
+.cronograma h3, .cronograma p {
+  text-align: center;
+  color: #FFFFFF;
+}
+.cronograma .dia {
+  text-transform: uppercase;
+  margin-bottom: 5rem;
+}
+
+.escenarios-contenedor {
+  /* @include m.tablet {
+      @include m.grid (2, 5rem); 
+  } */
+}
+.escenarios-contenedor p {
+  color: #000000;
+}
+.escenarios-contenedor .escenario {
+  padding-top: 2rem;
+}
+.escenarios-contenedor .escenario .nombre-escenario:after {
+  content: "";
+  display: block;
+  width: 20rem;
+  height: 10rem;
+  background-size: 15rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 2rem auto 0 auto;
 }
