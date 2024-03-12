@@ -518,24 +518,58 @@ img {
   margin-bottom: 5rem;
 }
 
-.escenarios-contenedor {
-  /* @include m.tablet {
-      @include m.grid (2, 5rem); 
-  } */
+@media (min-width: 768px) {
+  .escenarios-contenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
 }
 .escenarios-contenedor p {
   color: #000000;
 }
 .escenarios-contenedor .escenario {
   padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.escenarios-contenedor .escenario .nombre-escenario {
+  margin-bottom: 0;
 }
 .escenarios-contenedor .escenario .nombre-escenario:after {
   content: "";
   display: block;
-  width: 20rem;
-  height: 10rem;
   background-size: 15rem;
   background-repeat: no-repeat;
   background-position: center center;
   margin: 2rem auto 0 auto;
+}
+
+.calendario {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.calendario li {
+  padding: 2.5rem;
+  font-weight: 700;
+}
+.calendario li span {
+  font-weight: 400;
+}
+
+.bg-gris {
+  background-color: #E6E6E6;
+}
+.bg-gris li:nth-child(odd) {
+  background-color: #b3b3b3;
+}
+
+.bg-amarillo {
+  background-color: #F5F6CE;
+}
+.bg-amarillo .calendario li:nth-child(odd) {
+  background-color: #e3e678;
 }

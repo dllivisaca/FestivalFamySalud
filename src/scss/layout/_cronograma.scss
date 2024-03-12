@@ -17,22 +17,25 @@
 }
 
 .escenarios-contenedor {
-    /* @include m.tablet {
+    @include m.tablet {
         @include m.grid (2, 5rem); 
-    } */
-
+    } 
     p {
         color: v.$negro;
     }
     .escenario {
         padding-top: 2rem;
 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
         .nombre-escenario {
+            margin-bottom: 0;
             &:after {
                 content: '';
                 display: block;
-                width: 20rem;
-                height: 10rem;
                 background-size: 15rem;
                 background-repeat: no-repeat;
                 background-position: center center;
@@ -41,5 +44,34 @@
         }
     }
 }
+
+.calendario {
+    @include m.resetear-lista;
+    li {
+        padding: 2.5rem;
+        font-weight: 700;
+        span {
+            font-weight: 400;
+        }
+    }
+}
+
+.bg-gris {
+    background-color: v.$grisClaro;
+    li:nth-child(odd) {
+        background-color: darken(v.$grisClaro, 20%);
+    }
+}
+
+.bg-amarillo {
+    background-color: v.$amarillo;
+
+    .calendario {
+        li:nth-child(odd) {
+            background-color: darken(v.$amarillo, 20%);
+        }
+    }    
+}
+
 
 
