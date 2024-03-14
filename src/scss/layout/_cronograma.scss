@@ -25,11 +25,7 @@
     }
     .escenario {
         padding-top: 2rem;
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        border-radius: 3rem;
 
         .nombre-escenario {
             margin-bottom: 0;
@@ -47,6 +43,7 @@
 
 .calendario {
     @include m.resetear-lista;
+    margin-top: 3.5rem;
     li {
         padding: 2.5rem;
         font-weight: 700;
@@ -66,11 +63,21 @@
 .bg-amarillo {
     background-color: v.$amarillo;
 
-    .calendario {
-        li:nth-child(odd) {
-            background-color: darken(v.$amarillo, 20%);
-        }
-    }    
+    
+    li:nth-child(odd) {
+        background-color: darken(v.$amarillo, 20%);
+    }
+     
+}
+
+.icon-tabler-perfume {
+    display: block; /* Asegura que se trate como un bloque */
+    margin: auto; /* Centra horizontalmente */
+}
+
+.icon-tabler-mood-happy {
+    display: block; /* Asegura que se trate como un bloque */
+    margin: auto; /* Centra horizontalmente */
 }
 
 

@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function iniciarApp() {
-    //navegacionFija();
+    navegacionFija();
     crearGaleria();
-    //scrollNav();
+    scrollNav();
 }
 
 function navegacionFija() {

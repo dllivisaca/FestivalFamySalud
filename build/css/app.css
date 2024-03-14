@@ -380,15 +380,15 @@ img {
 } */
 .header {
   background-color: #F5DA81;
-  /* @include m.tablet {
-      &.fijo {
-          left: 0;
-          top: 0;
-          position: fixed;
-          width: 100%;
-          box-shadow: .1rem .2rem .3rem #666;
-      }
-  } */
+}
+@media (min-width: 768px) {
+  .header.fijo {
+    left: 0;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0.1rem 0.2rem 0.3rem #666;
+  }
 }
 .header h1 {
   color: #00008B;
@@ -530,10 +530,7 @@ img {
 }
 .escenarios-contenedor .escenario {
   padding-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  border-radius: 3rem;
 }
 .escenarios-contenedor .escenario .nombre-escenario {
   margin-bottom: 0;
@@ -551,6 +548,7 @@ img {
   margin: 0;
   padding: 0;
   list-style: none;
+  margin-top: 3.5rem;
 }
 .calendario li {
   padding: 2.5rem;
@@ -570,8 +568,18 @@ img {
 .bg-amarillo {
   background-color: #F5F6CE;
 }
-.bg-amarillo .calendario li:nth-child(odd) {
+.bg-amarillo li:nth-child(odd) {
   background-color: #e3e678;
+}
+
+.icon-tabler-perfume {
+  display: block; /* Asegura que se trate como un bloque */
+  margin: auto; /* Centra horizontalmente */
+}
+
+.icon-tabler-mood-happy {
+  display: block; /* Asegura que se trate como un bloque */
+  margin: auto; /* Centra horizontalmente */
 }
 
 .galeria {
@@ -642,16 +650,17 @@ img {
   cursor: pointer;
 }
 
-.boletos {
+.entradas {
+  background-color: #A9A9A9;
   padding: 5rem 0;
 }
-.boletos h3 {
+.entradas h3 {
   text-align: center;
   color: #FFFFFF;
   margin-bottom: 2rem;
 }
 @media (min-width: 768px) {
-  .boletos .contenedor-boletos {
+  .entradas .contenedor-entradas {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 5rem;
@@ -700,4 +709,14 @@ img {
 .pase-footer p {
   font-size: 2.4rem;
   font-weight: 700;
+}
+
+.site-footer {
+  background-color: #00008B;
+  padding: 1rem;
+}
+.site-footer p {
+  margin: 0;
+  text-align: center;
+  color: #FFFFFF;
 }
