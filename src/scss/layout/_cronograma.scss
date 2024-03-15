@@ -58,6 +58,9 @@
     li:nth-child(odd) {
         background-color: darken(v.$grisClaro, 20%);
     }
+    li:last-child {
+        border-radius: 0 0 3rem 3rem;
+    }  
 }
 
 .bg-amarillo {
@@ -66,8 +69,11 @@
     
     li:nth-child(odd) {
         background-color: darken(v.$amarillo, 20%);
-    }
-     
+    };
+
+    li:last-child {
+        border-radius: 0 0 3rem 3rem;
+    }     
 }
 
 .icon-tabler-perfume {
